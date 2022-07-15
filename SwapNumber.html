@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Swap two numbers </title>
+	<link rel="stylesheet" type="text/css" href="css/SwapNumber.css">
+		
+</head>
+<body>
+	
+		<div class="left-div">
+
+			<h1 class="Heading" style="font-family: tahoma;">CODE</h1>
+                   
+			<p id="line"></p><br>
+
+			<button  onclick="next()"  style="float: right; background-color:#56a5eb; cursor: pointer; " title="Go to next line of code">Next</button>&nbsp;&nbsp;&nbsp;
+			<button  style="float: right; background-color:#56a5eb; cursor: pointer; " onclick="refresh()" title="reset the all code">Reset</button>&nbsp;&nbsp;&nbsp;
+			<button onclick="prev()" style="float: right; background-color:#56a5eb; cursor: pointer; " title="Go to previous line of code" >Prev</button>&nbsp;&nbsp;&nbsp;
+			
+
+			<p id="2">1: import java.util.*;</p>
+			<p id="3">2 : class</p>
+			<p id="4">3 : {</p>
+			<p id="5">4 : public static void main(String args[])</p>
+			<p id="6">5 : {</p>
+			<p id="7">6 : int x,y,temp=0;</p>
+			<p id="8">7 : Scanner sc=new Scanner(System.in);</p>
+			<p id="9">8 : x=sc.nextInt();</p>
+			<p id="10">9 : y=sc.nextInt();</p>
+			<p id="11">10 : temp=x;</p>
+			<p id="12">11 : x=y;</p>
+			<p id="13">12 : y=temp;</p>
+			<p id="14">13 : System.out.println(x+" "+y)</p>
+			<p id="15">14 : }</p>
+			<p id="16">15 : }</p>	
+			
+		</div>
+		
+		<div class="right-div" >
+
+			<h1 class="Heading" style="font-family: tahoma;color: black; ">SIMULATOR</h1>
+                   
+			<p id="line"></p><br>
+			<button style="float: right; background-color:#ecf5ff; cursor: pointer; " > <a href="Prime or None Prime.html" style="text-decoration: none; color: black;" title="Go to next Program" >Next Program</a></button>
+
+			<p id="1" style="text-align: center; margin-top: 50px;font-weight: 1000;  font-size: 1.5em;"></p>
+	
+			<input type="number"  id="inp1"  placeholder="X=?" style="display: none; float: left;" />
+			<input type="number"  id="inp2"  placeholder="Y=?" style="display: none; " />
+		
+		</div>
+            <div id="div-gif" >
+                  <img src="img/amber-amberdoigthorne.gif"  id="cong-img">
+                  <marquee><p id="quote-img"></p></marquee>
+            </div>
+		
+
+		<script type="text/javascript">
+
+			function refresh(){
+				
+       		 window.location.reload("Refresh");
+       		
+      		}	
+      		
+
+			      		
+			let i=0;
+      		function next()
+      		{
+      			i++;
+      			
+      			
+      			switch(i)
+      			{
+      				case 1:
+      				document.getElementById('1').innerHTML="Java util package contains collection framework, collection classes, classes related to date and time, event model, internationalization, and miscellaneous utility classes. On importing this package, you can access all these classes and methods.";
+
+      				document.getElementById('2').style.color="red";
+
+      				break;
+      				case 2:
+      				document.getElementById('1').innerHTML="A class is a user defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type. ... Modifiers: A class can be public or has default access (Refer this for details). class keyword: class keyword is used to create a class.";
+      				document.getElementById('3').style.color="red";
+      				break;
+      				case 3:
+      				document.getElementById('1').innerHTML=" opening curly brace of class  ";
+      				document.getElementById('4').style.color="red";
+      				break;
+      				case 4:
+      				document.getElementById('1').innerHTML="<h3>public: It is an access specifier. We should use a public keyword before the main() method so that JVM can identify the execution point of the program. If we use private, protected, and default before the main() method, it will not be visible to JVM.<br><br>static: You can make a method static by using the keyword static. We should call the main() method without creating an object. Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.<br><br>void: In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.<br><br>main(): It is a default signature which is predefined in the JVM. It is called by JVM to execute a program line by line and end the execution after completion of this method. We can also overload the main() method.<br><br>String args[]: The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. It is used to hold the command line arguments in the form of string values.</h3>";
+      				document.getElementById('5').style.color="red";
+      				break;
+      				case 5:
+      				document.getElementById('1').innerHTML="opening curly brace of main method ";
+      				document.getElementById('6').style.color="red";
+      				break;
+      				case 6:
+      				document.getElementById('1').innerHTML=" Declare the variable ";
+      				document.getElementById('7').style.color="red";
+      				break;
+      				case 7:
+      				document.getElementById('1').innerHTML="Scanner is a class in java.util package used for obtaining the inputs.";
+      				document.getElementById('8').style.color="red";
+      				break;
+      				case 8:
+      				document.getElementById("1").innerHTML="<b>Enter The Value Of X </b>";
+      				document.getElementById("inp1").style.display = "block";
+  					var x=document.getElementById("inp1").value;
+  					document.getElementById('9').style.color="red";
+      				
+                              break;
+      				case 9:
+                              var x=document.getElementById("inp1").value;
+                              if (x=="")
+                                    { 
+                                          alert('Please Enter the value of X')
+                                          i--;
+                                          }
+                              else {
+      				document.getElementById("1").innerHTML="<b>Enter The Value Of Y </b>"
+      				document.getElementById("inp2").style.display = "block";
+  					var y=document.getElementById("inp2").value;
+  					document.getElementById('10').style.color="red";
+  					 }
+
+      				break;
+      				case 10:
+                              var y=document.getElementById("inp2").value;
+                              if (y=="")
+                               { 
+                                    alert('Please fill The value of Y')
+                                    i--;
+                               }
+                               else {
+      				document.getElementById("inp1").value;
+  					var x=document.getElementById("inp1").value;
+  					document.getElementById("1").innerHTML= "temp="+x;
+      				document.getElementById('11').style.color="red";
+      				
+                              }
+      				break;
+      				case 11:
+      				document.getElementById("inp2").value;
+      				var y=document.getElementById("inp2").value;
+      				document.getElementById('1').innerHTML="X="+y;
+      				document.getElementById('12').style.color="red";
+      				
+      				break;
+      				case 12:
+      				document.getElementById("inp1").value;
+      				var x=document.getElementById("inp1").value;
+      				document.getElementById('1').innerHTML="Y="+x;
+      				document.getElementById('13').style.color="red";
+      				break;
+      				case 13:
+      				var x=document.getElementById("inp1").value;
+      				var y=document.getElementById("inp2").value;
+      				document.getElementById('1').innerHTML="After Swaping the Values : <br>"+"X="+y+" & "+"Y="+x;
+      				document.getElementById('14').style.color="red";
+      				break;
+      				case 14:
+      				document.getElementById('1').innerHTML="closing curly brace of main method";
+                              document.getElementById("inp1").style.display = "none";
+                              document.getElementById("inp2").style.display = "none";
+      				document.getElementById('15').style.color="red";
+      				break;
+      				case 15:
+      				document.getElementById('1').innerHTML="closing curly brace of class";
+      				document.getElementById('16').style.color="red";
+      				break;
+	
+      			}
+      			if (i>15) {alert('End of The code'); i--; }
+                        if (i==15) { 
+                              document.getElementById('cong-img').style.display='block';
+                              document.getElementById('quote-img').innerHTML="Congratulation's You Learned";
+                                   
+                        }
+
+      		}
+      		
+      		function prev()
+      		{
+      			
+      			i--;
+      			
+      			switch(i)
+      			{
+
+      				case 1:
+      				document.getElementById('1').innerHTML="Java util package contains collection framework, collection classes, classes related to date and time, event model, internationalization, and miscellaneous utility classes. On importing this package, you can access all these classes and methods.";
+      					document.getElementById('3').style.color="black";
+      				
+      				break;
+      				case 2:
+      				document.getElementById('1').innerHTML="A class is a user defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type. ... Modifiers: A class can be public or has default access (Refer this for details). class keyword: class keyword is used to create a class.";
+      				document.getElementById('4').style.color="black";
+      				break;
+      				case 3:
+      				document.getElementById('1').innerHTML=" opening curly brace of class  ";
+      				document.getElementById('5').style.color="black";
+      				break;
+      				case 4:
+      				document.getElementById('1').innerHTML="<h3>public: It is an access specifier. We should use a public keyword before the main() method so that JVM can identify the execution point of the program. If we use private, protected, and default before the main() method, it will not be visible to JVM.<br><br>static: You can make a method static by using the keyword static. We should call the main() method without creating an object. Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.<br><br>void: In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.<br><br>main(): It is a default signature which is predefined in the JVM. It is called by JVM to execute a program line by line and end the execution after completion of this method. We can also overload the main() method.<br><br>String args[]: The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. It is used to hold the command line arguments in the form of string values.</h3>";
+      				document.getElementById('6').style.color="black";
+      				break;
+      				case 5:
+      				document.getElementById('1').innerHTML="opening curly brace of main method ";
+      				document.getElementById('7').style.color="black";
+      				break;
+      				case 6:
+      				document.getElementById('1').innerHTML=" Declare the variable ";
+      				document.getElementById('8').style.color="black";
+      				break;
+      				case 7:
+      				document.getElementById('1').innerHTML="Scanner is a class in java.util package used for obtaining the inputs.";
+      				
+      				
+      				document.getElementById("inp1").style.display = "none";
+      				document.getElementById("inp2").style.display = "none";
+      				document.getElementById('9').style.color="black";
+      				break;
+      				case 8:
+      				document.getElementById("1").innerHTML="<b>Enter The Value Of X </b>";
+      				document.getElementById('16').style.color="black";
+      				document.getElementById('10').style.color="black";
+      				break;
+      				case 9:
+      				document.getElementById("1").innerHTML="<b>Enter The Value Of Y </b>"
+      				document.getElementById('11').style.color="black";
+      				break;
+      				case 10:
+      				document.getElementById("inp1").value;
+  					var x=document.getElementById("inp1").value;
+  					document.getElementById("1").innerHTML= "temp="+x;
+  					document.getElementById('12').style.color="black";
+      				
+      				break;
+      				case 11:
+      				document.getElementById("inp2").value;
+      				var y=document.getElementById("inp2").value;
+      				document.getElementById('1').innerHTML="X="+y;
+      				document.getElementById('13').style.color="black";
+      				
+      				break;
+      				case 12:
+      				document.getElementById("inp1").value;
+      				var x=document.getElementById("inp1").value;
+      				document.getElementById('1').innerHTML="Y="+x;
+      				document.getElementById('14').style.color="black";
+      				
+      				break;
+      				case 13:
+      				var x=document.getElementById("inp1").value;
+      				var y=document.getElementById("inp2").value;
+      				document.getElementById('1').innerHTML="After Swaping the Values : <br>"+"X="+y+" & "+"Y="+x;
+      				document.getElementById('14').style.color="red";
+      				document.getElementById('15').style.color="black";
+      				break;
+      				case 14:
+      				document.getElementById('1').innerHTML="closing curly brace of main method";
+      				document.getElementById('16').style.color="black";
+                              document.getElementById('cong-img').style.display='none';
+                              document.getElementById('quote-img').innerHTML="";
+      				break;
+      				case 15:
+      				document.getElementById('1').innerHTML="closing curly brace of class";
+      				document.getElementById('17').style.color="black";
+
+                              
+                                   
+                       
+      				break;		
+      				
+      			}
+      			if (i<1) {alert("Starting point of the code"); i++;};
+      			
+      		}
+
+
+
+		</script>
+
+</body>
+</html>
+
